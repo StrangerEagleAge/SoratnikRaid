@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Полноэкранный блок на CSS и HTML</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="modal.css">
+
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/tournament.css">
+	<link rel="stylesheet" href="css/text-adaptive.css">
+
+
+	<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+
+
+	<!-- это для подключения своих иконочных шрифтов, которые можно скачать через 
+		консоль в font-awesom а потом с использованием icomoon сохранить их и вставить в проект
+	<link rel="stylesheet" href="css/iconsfont.css">
+	-->
+
+	<!-- font-awesome все иконки -->
+	<link rel="stylesheet" href="css/icon-fonts-all.css">
+
+
+
+
+	<!-- Шрифты -->
+	<!-- для подключения с google fonts нужно вставить ссылки сюда 2 с preconnect
+		и стили в css в виде @import url, @font-face и для упрощения подключения можно задавать их через стили-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;800&family=Poppins:wght@600&display=swap"
+		rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+
+	<!-- Шрифты для видеофона -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Secular+One&display=swap">
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<!--? 1ый адаптивный блок -->
+		<!--
+			text_center - ставим если нужно текст разместить по центру
+			ставим прямо в section после fullscreen_one
+
+			link_start или link_center - кнопка слева или по центру,
+			а если убрать, то растянется на всю ширину блока
+		-->
+		<section class="fullscreen fullscreen_one t_center">
+			<header id="header" class="header lock-padding">
+				<div class="header__container _container">
+
+					<div class="avatar_clan">
+						<img class="avatar_img" src="img/avatar.jpg" alt="Аватар не прогрузился">
+					</div>
+					<h2 class="text_name">Соратники Битвы</h2>
+					<a href="#popup" class="header__phone popup-link  fa-solid fa-bars"> История</a>
+
+				</div>
+			</header>
+			<div class="header__body">
+				<!--
+				<h1 class="header__title">Соратники Битвы</h1>
+				-->
+
+				<h1 class="text_main text__transparent">Итоги года</h1>
+				<h1 class="header__title">2025</h1>
+
+				<h1 class="header__title font_maven"></h1>
+				<div class="header__text">Результаты. Информация. Достижения.</div>
+				<!--
+				<div class="header__text font_pattaya">You succesfull</div>
+			
+				<a target="_blank" class="header__link link_center" href="#">Вперёд</a>
+				-->
+			</div>
+		</section>
+
+		<!--? 2ой адаптивный блок -->
+		<!--
+			text_center - ставим если нужно текст разместить по центру
+			ставим прямо в div после fullscreen__body 
+
+			link_start или link_center - кнопка слева или по центру,
+			а если убрать, то растянется на всю ширину блока
+		-->
+
+		<footer class="fullscreen fullscreen_two">
+			<div class="footer__body">
+
+				<div class="text-row">
+					<h2 class="fullscreen__title_h2">Клановые Битвы</h2>
+
+					<p data-tooltip="Нажми на цифру чтобы открыть видео">
+						<img src="img/info-iconW.svg" alt="Кликабельные цифры">
+					</p>
+				</div>
+
+				<div class="fullscreen__text">
+
+					Мы выиграли:
+
+				</div>
+
+				<div class="footer-row">
+
+					<div class="footer__block fb1 text_center">
+						<h1 class="fullscreen__title_h2">Турниров</h1>
+						<div class="fullscreen__number">
+							<a href="#popup_tournauments" class="popup-link hover-light">
+								<div class="counting_numbers">
+									<div data-digits-counter class="counting_number"> 7 </div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="footer__block fb2 text_center">
+						<h1 class="fullscreen__title_h2">Осада</h1>
+						<div class="fullscreen__number">
+							<a href="#popup_siege" class="popup-link hover-light">
+								<div class="counting_numbers">
+									<div data-digits-counter class="counting_number"> 1 </div>
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+		</footer>
+
+
+		<footer class="fullscreen footer">
+			<div class="footer__body">
+
+				<h2 class="fullscreen__title_h2">А также мы получили</h2>
+
+				<div class="footer-row">
+
+					<div class="footer__block fb1 text_center">
+						<h1 class="fullscreen__title_h2">Уровень Клана</h1>
+						<div class="fullscreen__number">
+							<div class="counting_numbers">
+								<div data-digits-counter class="counting_number"> 8 </div>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="footer__block fb2 text_center">
+						<h1 class="fullscreen__title_h2">Звезду</h1>
+						<div class="fullscreen__number">
+							<div class="counting_numbers">
+								<div data-digits-counter class="counting_number"> 1 </div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+		<section class="fullscreen_row">
+			<div class="flex-row">
+				<div class="flex__body">
+
+					<h2 class="fullscreen__title_h2">Открыли - Ультраадский Владыка Демонов</h2>
+
+				</div>
+				<div class="flex__body">
+
+					<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239023" width="500" height="220"
+						style="background-color: transparent"
+						allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0"
+						allowfullscreen>
+					</iframe>
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<footer class="fullscreen footer">
+			<div class="footer__body">
+
+				<h2 class="fullscreen__title_h2">Даты</h2>
+				<!--
+				<div class="fullscreen__text">Даты</div>
+			-->
+
+
+				<div class="footer-row">
+
+					<div class="footer__block fb1 text_center">
+						<h1 class="fullscreen__title_h2">Клан основан</h1>
+						<div class="fullscreen__text">
+							20 Марта
+						</div>
+
+					</div>
+					<div class="footer__block fb2 text_center">
+						<h1 class="fullscreen__title_h2">Запуск Телеграм</h1>
+						<div class="fullscreen__text"> 8 Сентября </div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+		<!--? паралакс эффект, если нужен! :) -->
+		<section class="fullscreen fullscreen_bg">
+			<div class="footer__body">
+				<h1 class="fullscreen__title_h2">Связаться:</h1>
+
+				<div class="footer-row">
+
+					<div class="footer__block fb1 text_center">
+						<h1 class="fullscreen__title_h2">Для общения с соратниками:</h1>
+						<div class="fullscreen__text">
+							<a target="_blank" href="https://t.me/SoratnikRaid">
+								<i class="fa-brands fa-telegram"></i>
+								Телеграм
+							</a>
+						</div>
+					</div>
+
+					<div class="footer__block fb2 text_center">
+						<h1 class="fullscreen__title_h2">Глава:</h1>
+						<div class="fullscreen__text">
+							<a target="_blank"
+								href="https://www.instagram.com/invites/contact/?igsh=1a9d4j9zkemf4&utm_content=2j95232">
+								<i class="fa-brands fa-instagram"></i>
+								Инстаграм
+							</a>
+							<!--
+							<a target="_blank" href="https://www.instagram.com/@strangereagleage">
+								<i class="fa-brands fa-instagram"></i>
+								Инстаграм
+							</a>
+							-->
+
+
+							<!--
+							<br /><br />
+							<a target="_blank" href="https://www.youtube.com/@Vadim-Armwrestling">
+								<i class="fa-brands fa-youtube"></i>
+								YouTube
+							</a>
+							-->
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+	</div>
+
+
+
+
+
+
+	<div id="popup" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#header" class="popup__close close-popup"> X </a>
+				<div class="popup__title">История</div>
+
+				<p>
+					Если вы когда-нибудь посещали Skyrim, то наверняка встречали
+					<a target="_blank" href="https://elderscrolls.net/skyrim/walkthrough-companions/">
+						Соратников
+					</a>
+					! И знаете уклад жизни, помните цели помогать другим и биться сообща!
+				</p>
+				<p>
+					Битвы - основа нашего дела! Трофеи Клановых турниров и Осад должны украшать наш дом!
+				</p>
+				<img class="information_img" src="img/Йоррваскр.webp" alt="Картинка не загрузилась..">
+				<p>
+					Вместе мы достигнем бОльшего! Поэтому был введён минимальный уровень очков, чтобы понять кто движется
+					вместе с
+					нами и кому интересно развивать наш Клан! Не сделать минимальные усилия - Тогда место освобождается
+					для более
+					вовлечённого воина! При этом, любой бой можно пропустить, но это только для тех кто давно с нами и
+					активно общается!
+				</p>
+
+				<img class="information_img" src="img/связь.jpg" alt="Картинка не загрузилась..">
+
+				<br /><br />
+
+				<div class="popup__title">Начало</div>
+				<img class="information_img" src="img/КланСтарт/Клан 20 марта 2025.jpg" alt="Картинка не загрузилась..">
+				<img class="information_img" src="img/КланСтарт/Клан 4 апреля 2025.jpg" alt="Картинка не загрузилась..">
+
+
+
+
+			</div>
+
+		</div>
+	</div>
+	</div>
+	<div id="popup_tournauments" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#header" class="popup__close close-popup"> X </a>
+				<div class="popup__title">Турниры</div>
+				<div class="popup__text">
+
+					<div class="tournament">
+						<h1>1</h1>
+						<img class="tournament_img" src="img/video/Турнир1.jpg" alt="Упс.. Картинка не загрузилась..">
+					</div>
+					<div class="tournament">
+						<h1>2</h1>
+						<h1>Не нашлась</h1>
+					</div>
+					<div class="tournament">
+						<h1>3</h1>
+						<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239017" width="1920" height="420"
+							style="background-color: #000"
+							allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+							frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+					<div class="tournament">
+						<h1>4</h1>
+						<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239018" width="1920" height="420"
+							style="background-color: #000"
+							allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+							frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+					<div class="tournament">
+						<h1>5</h1>
+						<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239019" width="1920" height="420"
+							style="background-color: #000"
+							allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+							frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+					<div class="tournament">
+						<h1>6</h1>
+						<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239020" width="1920" height="420"
+							style="background-color: #000"
+							allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+							frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+					<div class="tournament">
+						<h1>7</h1>
+						<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239021" width="1920" height="420"
+							style="background-color: #000"
+							allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+							frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup_siege" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#header" class="popup__close close-popup"> X </a>
+				<div class="popup__title">Осада</div>
+
+				<div class="popup__text">
+					<div class="tournament">
+						<h1>1</h1>
+						<iframe src="https://vk.com/video_ext.php?oid=-235048877&id=456239022" width="1920" height="420"
+							style="background-color: #000"
+							allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+							frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="image" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#header" class="popup__close close-popup"> X </a>
+				<div class="popup__image">
+					<img src="img/EveAmarr_Steam.jpg" alt="Упс! Должна была открыться картинка..">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="image_velo" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#header" class="popup__close close-popup"> X </a>
+				<div class="popup__image">
+					<img src="img/velo.jpg" alt="Упс! Должна была открыться картинка..">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--? SCRIPTS -->
+	<script src="js/popups.js"></script>
+
+
+
+
+
+</body>
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+<script src="js/smoothScroll.js"></script>
+-->
+
+<script src="js/counting-numbers.js"></script>
+
+
+
+
+
+
+
+
+
+
+</html>

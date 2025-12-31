@@ -1,0 +1,60 @@
+.text_main {
+	/*
+	font-size: 39px;
+	*/
+	font-weight: 900;
+
+	/* делаем адаптивный шрифт под размер мин. экрана */
+	/* 1ая цифра - мин значение размера шрифта
+	2ая цифра - разница первоначальное значение вычесть минимальное
+	*/
+	font-size: calc(50px + 70 * (100vw / 1280));
+}
+
+@media (max-width: 900px) {
+	.text_main {
+		font-weight: 900;
+		font-size: calc(50px + (18 + 18 * 5) * ((100vw - 750px) / 1280));
+	}
+}
+
+
+.text_name {
+	font-weight: 900;
+	font-size: calc(20px + 20 * (100vw / 1280));
+
+}
+
+@media (max-width: 900px) {
+	.text_name {
+		font-weight: 900;
+		font-size: calc(20px + (18 + 18 * 0.9) * ((100vw - 750px) / 1280));
+	}
+
+	.text_name {
+		position: absolute;
+		left: 45%;
+	}
+
+	.text_main {
+		position: absolute;
+		top: 30%;
+		left: 45%;
+	}
+
+	.header__title {
+		position: absolute;
+		left: 45%;
+
+		top: 39%;
+	}
+
+	.header__text {
+		position: absolute;
+		left: 10%;
+		top: 70%;
+	}
+
+
+
+}
